@@ -1,18 +1,30 @@
-//html,body{
-//  font-family: $default-font;
-//  font-size: 16px;
-//  font-weight: 400;
-//}
-//.wrapper {
-//  min-height: 100%;
-//  width: 100%;
-//  overflow: hidden;
-//}
-//.container{
-//  max-width: 1180px;
-//  margin: 0 auto;
-//  height: 100%;
-//}
-html{
-  background: $color;
+html,body{
+  font-family: $default-font;
+  font-size: 18px;
+  font-weight: 400;
+  background: $background;
+}
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  margin: 24px auto;
+}
+.inner{
+  min-height: 100%;
+  width: 1392px;
+  border-radius:24px;
+  margin: 0 auto;
+  backdrop-filter: blur(240px);
+  background: rgba(255, 255, 255, 0.65);
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container{
+  max-width: $content-width;
+  padding: 0 33px;
+  margin: 0 auto;
+  min-height: 100%;
 }

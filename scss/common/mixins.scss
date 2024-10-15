@@ -1,3 +1,11 @@
+@mixin flex($justify,$align){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin padding-button($vertical,$baseline){
+  padding: $vertical $baseline;
+}
 //@mixin font-title($font-size,$font-weight,$color){
 //  font-size: $font-size;
 //  font-weight: $font-weight;

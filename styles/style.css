@@ -1,11 +1,166 @@
+@font-face {
+  font-family: "Visuelt Pro";
+  src: url("../../fonts/VisueltPro-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Visuelt Pro";
+  src: url("../../fonts/VisueltPro-Medium.ttf");
+  font-weight: 500;
+}
 * {
-  box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-html {
-  background: skyblue;
+* {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+header {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+}
+
+button {
+  cursor: pointer;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.default-button, .white-button, .blue-button, .header-help a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: "Visuelt Pro";
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.default-button:hover, .white-button:hover, .blue-button:hover, .header-help a:hover {
+  box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
+}
+
+.blue-button, .header-help a {
+  color: #fff;
+  background: #4754eb;
+}
+.blue-button:hover, .header-help a:hover {
+  background: #505dec;
+  box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
+}
+.blue-button:active, .header-help a:active {
+  box-shadow: 0 8px 24px 0 rgba(60, 73, 221, 0.1);
+  background: #3c49dd;
+}
+
+.white-button {
+  color: #4754eb;
+  background: #fff;
+}
+
+html, body {
+  font-family: "Visuelt Pro";
+  font-size: 18px;
+  font-weight: 400;
+  background: #f2f2f2;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  margin: 24px auto;
+}
+
+.inner {
+  min-height: 100%;
+  width: 1392px;
+  border-radius: 24px;
+  margin: 0 auto;
+  backdrop-filter: blur(240px);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 33px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.header {
+  width: 100%;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+.header-inner h1 {
+  font: 500 1rem/135% "Visuelt Pro";
+  color: #4754eb;
+}
+.header-menu {
+  display: flex;
+  gap: 5.333rem;
+}
+.header-nav {
+  display: flex;
+  font: 400 1rem/135% "Visuelt Pro";
+  align-items: center;
+  gap: 1.333rem;
+  color: #808080;
+  transition: all 0.9s ease-in-out;
+}
+.header-nav a:hover {
+  color: #505050;
+}
+.header-help {
+  display: flex;
+  gap: 0.889rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-help p {
+  text-align: center;
+  color: #808080;
+  font: 400 1rem/135% "Visuelt Pro";
+}
+.header-help p span {
+  font: 500 1rem/135% "Visuelt Pro";
+  color: #4754eb;
+}
+.header-help a {
+  padding: 12px 24px;
+}
+.header-help a:hover {
+  padding: 10px 24px 14px 24px;
+}
+.header-help a:active {
+  padding: 12px 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
