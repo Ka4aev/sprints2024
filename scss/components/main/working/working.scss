@@ -1,0 +1,81 @@
+.working{
+
+  width: 100%;
+  overflow: hidden;
+  background:
+          url("../../../../images/gradients/working-white.svg") bottom -250px right -180px no-repeat,
+          url("../../../../images/gradients/working-spots.svg") top -600px right -220px no-repeat,
+          url("../../../../images/gradients/working-circles.svg") top 235px left -150px no-repeat;
+
+  &-background{
+    min-height: 100%;
+    width: 100%;
+    backdrop-filter: blur(240px);
+  }
+
+  &-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 2.278rem;
+    padding: 4.444rem 0;
+  }
+  &-content{
+    display: flex;
+    gap: 1.333rem;
+  }
+  &-about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 26px;
+    width: 37.889rem;
+
+    h3{
+      margin-bottom: 16px;
+    }
+  }
+  &-slider{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font: $default-font;
+    color: $main-white;
+    margin-bottom: 30px;
+
+    span{
+      font: $default-font-medium;
+      color: $color-blue;
+    }
+  }
+  &-dash{
+    border: 1px solid var(--main-white);
+    width: 24px;
+    height: 1px;
+    background: $main-white;
+  }
+  &-topic{
+    font: $default-font-medium;
+    color: $color-blue;
+    margin-bottom: 24px;
+  }
+  &-description{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.944rem;
+    width: 25.722rem;
+    gap: 16px;
+    color: $main-grey;
+    font: $default-font-text;
+  }
+  button{
+    width: 13.722rem;
+    @extend .blue-button;
+    @include padding-button(16px,24px);
+
+    &:hover{
+      padding: 13px 24px 19px 24px;
+    }
+    &:active{
+      @include padding-button(16px,24px);
+    }
+  }
+}

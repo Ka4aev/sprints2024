@@ -8,11 +8,6 @@
   &-inner{
     @include flex(space-between,center);
     padding: 16px 0;
-
-    h1{
-      font: $default-font-medium;
-      color: $color-blue;
-    }
   }
   &-menu{
     display: flex;

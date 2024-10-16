@@ -1,0 +1,75 @@
+.greeting{
+  width: 100%;
+  background:
+  url("../../../../images/gradients/content-white.svg") top -115px left 50px no-repeat,
+  url("../../../../images/gradients/content-spots.svg") top 450px left -250px no-repeat,
+  url("../../../../images/gradients/content-circles.svg") top 60px right 32px no-repeat;
+  overflow-y:hidden ;
+
+  &-img{
+    width: 35.889rem;
+    height: 27.889rem;
+  }
+  &-background{
+    min-height: 100%;
+    width: 100%;
+    backdrop-filter: blur(240px);
+  }
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 4.444rem 0;
+  }
+  &-content{
+    margin-top: 2.222rem;
+  }
+  h2{
+    margin-bottom: 2.222rem;
+  }
+  form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    width: 25.833rem;
+    height: 3.556rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.111rem 0.444rem 1.111rem 0.889rem;
+    margin-bottom: 16px;
+    margin-bottom: 16px;
+
+    input{
+      background: transparent;
+      font: $default-font-text;
+      align-items: center;
+    }
+
+    button{
+      @extend .white-button;
+      @include padding-button(12px,24px);
+      &:hover{
+        padding: 10px 24px 14px 24px;
+      }
+      &:active{
+        @include padding-button(12px,24px);
+      }
+    }
+  }
+  &-warning{
+    margin:0 0 126px 8px;
+    width: 19.667rem;
+    font: $description-font-text;
+    color: $dark-grey;
+
+    a{
+      color: $hover-blue;
+    }
+  }
+  &-wheeldown{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font: $table-text;
+    color: $main-white;
+  }
+}

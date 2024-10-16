@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font: $default-font;
+  font: $default-font-medium;
   border-radius: 16px;
   transition: all 0.2s ease-in-out;
 ;
@@ -28,4 +28,10 @@
   @extend .default-button;
   color: $color-blue;
   background: $main-white;
+  &:hover{
+    box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
+  }
+  &:active{
+    box-shadow: 0 8px 24px 0 rgba(60, 73, 221, 0.1);
+  }
 }

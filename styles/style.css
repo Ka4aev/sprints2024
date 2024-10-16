@@ -42,34 +42,40 @@ a, a:visited {
   color: inherit;
 }
 
-.default-button, .white-button, .blue-button, .header-help a {
+.default-button, .white-button, .tariff a, .greeting form button, .blue-button, .working button, .header-help a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font: "Visuelt Pro";
+  font: 500 1rem/135% "Visuelt Pro";
   border-radius: 16px;
   transition: all 0.2s ease-in-out;
 }
-.default-button:hover, .white-button:hover, .blue-button:hover, .header-help a:hover {
+.default-button:hover, .white-button:hover, .tariff a:hover, .greeting form button:hover, .blue-button:hover, .working button:hover, .header-help a:hover {
   box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
 }
 
-.blue-button, .header-help a {
+.blue-button, .working button, .header-help a {
   color: #fff;
   background: #4754eb;
 }
-.blue-button:hover, .header-help a:hover {
+.blue-button:hover, .working button:hover, .header-help a:hover {
   background: #505dec;
   box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
 }
-.blue-button:active, .header-help a:active {
+.blue-button:active, .working button:active, .header-help a:active {
   box-shadow: 0 8px 24px 0 rgba(60, 73, 221, 0.1);
   background: #3c49dd;
 }
 
-.white-button {
+.white-button, .tariff a, .greeting form button {
   color: #4754eb;
   background: #fff;
+}
+.white-button:hover, .tariff a:hover, .greeting form button:hover {
+  box-shadow: 0 24px 24px 0 rgba(80, 93, 236, 0.25);
+}
+.white-button:active, .tariff a:active, .greeting form button:active {
+  box-shadow: 0 8px 24px 0 rgba(60, 73, 221, 0.1);
 }
 
 html, body {
@@ -80,6 +86,7 @@ html, body {
 }
 
 .wrapper {
+  position: relative;
   min-height: 100%;
   width: 100%;
   margin: 24px auto;
@@ -90,7 +97,6 @@ html, body {
   width: 1392px;
   border-radius: 24px;
   margin: 0 auto;
-  backdrop-filter: blur(240px);
   background: rgba(255, 255, 255, 0.65);
 }
 
@@ -101,10 +107,36 @@ body {
 }
 
 .container {
-  max-width: 1250px;
-  padding: 0 33px;
+  max-width: 1392px;
+  padding: 0 56px;
   margin: 0 auto;
   min-height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+h1 {
+  font: 500 1rem/135% "Visuelt Pro";
+  color: #4754eb;
+}
+
+h2 {
+  font: 500 3.111rem/125% "Visuelt Pro";
+  color: #1a1a1a;
+}
+
+h3 {
+  font: 500 2rem/112% "Visuelt Pro";
+  color: #1a1a1a;
+}
+
+h4 {
+  font: 500 1.333rem/100% "Visuelt Pro";
+  color: #1a1a1a;
 }
 
 .header {
@@ -117,10 +149,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-}
-.header-inner h1 {
-  font: 500 1rem/135% "Visuelt Pro";
-  color: #4754eb;
 }
 .header-menu {
   display: flex;
@@ -135,7 +163,7 @@ body {
   transition: all 0.9s ease-in-out;
 }
 .header-nav a:hover {
-  color: #505050;
+  color: #595959;
 }
 .header-help {
   display: flex;
@@ -161,6 +189,251 @@ body {
 }
 .header-help a:active {
   padding: 12px 24px;
+}
+
+.greeting {
+  width: 100%;
+  background: url("../../../../images/gradients/content-white.svg") top -115px left 50px no-repeat, url("../../../../images/gradients/content-spots.svg") top 450px left -250px no-repeat, url("../../../../images/gradients/content-circles.svg") top 60px right 32px no-repeat;
+  overflow-y: hidden;
+}
+.greeting-img {
+  width: 35.889rem;
+  height: 27.889rem;
+}
+.greeting-background {
+  min-height: 100%;
+  width: 100%;
+  backdrop-filter: blur(240px);
+}
+.greeting-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.444rem 0;
+}
+.greeting-content {
+  margin-top: 2.222rem;
+}
+.greeting h2 {
+  margin-bottom: 2.222rem;
+}
+.greeting form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  width: 25.833rem;
+  height: 3.556rem;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.111rem 0.444rem 1.111rem 0.889rem;
+  margin-bottom: 16px;
+  margin-bottom: 16px;
+}
+.greeting form input {
+  background: transparent;
+  font: 400 1rem/135% "Visuelt Pro";
+  align-items: center;
+}
+.greeting form button {
+  padding: 12px 24px;
+}
+.greeting form button:hover {
+  padding: 10px 24px 14px 24px;
+}
+.greeting form button:active {
+  padding: 12px 24px;
+}
+.greeting-warning {
+  margin: 0 0 126px 8px;
+  width: 19.667rem;
+  font: 400 12px/135% "Visuelt Pro";
+  color: #595959;
+}
+.greeting-warning a {
+  color: #505dec;
+}
+.greeting-wheeldown {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font: 400 0.889rem/135% "Visuelt Pro";
+  color: #fff;
+}
+
+.advantages {
+  width: 100%;
+  background: #fff;
+}
+.advantages-inner {
+  width: 100%;
+  min-height: 100%;
+  padding: 80px 0;
+}
+.advantages-inner h3 {
+  margin: 0 0 40px 56px;
+}
+.advantages-grid {
+  margin: 0 25px;
+  display: grid;
+  grid-template: 1fr/repeat(3, 1fr);
+  gap: 16px;
+}
+
+.advantage {
+  border-radius: 24px;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 4px 20px 0 rgba(25, 25, 25, 0.05);
+  background: #FAFAFA;
+}
+.advantage-title {
+  padding: 13px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+}
+.advantage-description {
+  padding: 17px 24px;
+  font: 400 1rem/135% "Visuelt Pro";
+  color: #808080;
+}
+
+.working {
+  width: 100%;
+  overflow: hidden;
+  background: url("../../../../images/gradients/working-white.svg") bottom -250px right -180px no-repeat, url("../../../../images/gradients/working-spots.svg") top -600px right -220px no-repeat, url("../../../../images/gradients/working-circles.svg") top 235px left -150px no-repeat;
+}
+.working-background {
+  min-height: 100%;
+  width: 100%;
+  backdrop-filter: blur(240px);
+}
+.working-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.278rem;
+  padding: 4.444rem 0;
+}
+.working-content {
+  display: flex;
+  gap: 1.333rem;
+}
+.working-about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 26px;
+  width: 37.889rem;
+}
+.working-about h3 {
+  margin-bottom: 16px;
+}
+.working-slider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font: "Visuelt Pro";
+  color: #fff;
+  margin-bottom: 30px;
+}
+.working-slider span {
+  font: 500 1rem/135% "Visuelt Pro";
+  color: #4754eb;
+}
+.working-dash {
+  border: 1px solid var(--main-white);
+  width: 24px;
+  height: 1px;
+  background: #fff;
+}
+.working-topic {
+  font: 500 1rem/135% "Visuelt Pro";
+  color: #4754eb;
+  margin-bottom: 24px;
+}
+.working-description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.944rem;
+  width: 25.722rem;
+  gap: 16px;
+  color: #808080;
+  font: 400 1rem/135% "Visuelt Pro";
+}
+.working button {
+  width: 13.722rem;
+  padding: 16px 24px;
+}
+.working button:hover {
+  padding: 13px 24px 19px 24px;
+}
+.working button:active {
+  padding: 16px 24px;
+}
+
+.tariffs {
+  width: 100%;
+  background: #fff;
+}
+.tariffs-inner {
+  width: 100%;
+  min-height: 100%;
+  padding: 80px 0;
+}
+.tariffs-inner h3 {
+  margin: 0 0 40px 56px;
+}
+.tariffs-grid {
+  margin: 0 24px;
+  display: grid;
+  grid-template: 1fr/repeat(4, 1fr);
+  gap: 24px;
+}
+
+.tariff {
+  border-radius: 24px;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 4px 20px 0 rgba(25, 25, 25, 0.05);
+  background: #fafafa;
+  transition: all 0.3s ease-in-out;
+}
+.tariff:hover {
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-15px);
+}
+.tariff-topic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 24px;
+  height: 96px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.tariff-info {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  padding: 24px;
+}
+.tariff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style-type: none;
+}
+.tariff-list li {
+  font: 400 1rem/135% "Visuelt Pro";
+  color: #808080;
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+.tariff a {
+  padding: 16px 56px;
+}
+.tariff a:hover {
+  padding: 13px 56px 19px 56px;
+}
+.tariff a:active {
+  padding: 16px 56px;
 }
 
 /*# sourceMappingURL=style.css.map */
