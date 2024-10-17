@@ -1,5 +1,4 @@
 .working{
-
   width: 100%;
   overflow: hidden;
   background:
@@ -16,18 +15,18 @@
   &-inner{
     display: flex;
     flex-direction: column;
-    gap: 2.278rem;
-    padding: 4.444rem 0;
+    gap: 2.28rem;
+    padding: 4.4rem 0;
   }
   &-content{
     display: flex;
-    gap: 1.333rem;
+    gap: 1.3rem;
   }
   &-about{
     display: flex;
     flex-direction: column;
     margin-top: 26px;
-    width: 37.889rem;
+    width: 37.89rem;
 
     h3{
       margin-bottom: 16px;
@@ -61,13 +60,13 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 3.944rem;
-    width: 25.722rem;
+    width: 25.72rem;
     gap: 16px;
     color: $main-grey;
     font: $default-font-text;
   }
   button{
-    width: 13.722rem;
+    width: 13.72rem;
     @extend .blue-button;
     @include padding-button(16px,24px);
 

@@ -1,0 +1,101 @@
+.reviews{
+  width: 100%;
+  overflow: hidden;
+  background:
+          url("../../../../images/gradients/reviews-white.svg") bottom -170% left -380px no-repeat,
+          url("../../../../images/gradients/reviews-spots__blue.svg") bottom -800% right -60% no-repeat,
+          url("../../../../images/gradients/reviews-spots.svg") top -210% right -30% no-repeat;
+
+  &-background{
+    min-height: 100%;
+    width: 100%;
+    backdrop-filter: blur(240px);
+  }
+  &-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    padding: 4.444rem 0;
+  }
+  &-block{
+    width: 100%;
+    min-height: 31.1rem;
+    position: relative;
+
+    button{
+      @extend .white-button;
+      @include padding-button(16px,24px);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      &:hover{
+        padding: 14px 24px 18px 24px;
+      }
+      &:active{
+        @include padding-button(16px,24px);
+      }
+    }
+  }
+  &-semen{
+    top: 0;
+    left: 326px;
+  }
+  &-oleja{
+    top: 56px;
+    left: 0;
+  }
+  &-serega{
+    bottom: 0;
+    left: 164px;
+  }
+  &-inokenty{
+    top: 195px;
+    right: 0;
+  }
+
+}
+.review{
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  width: 628px;
+  backdrop-filter: blur(240px);
+  border: solid 1px $main-white;
+  background: #EAE7F4;
+  position: absolute;
+  height: 240px;
+
+  &-topic{
+    display: flex;
+    @include flex(space-between,center);
+    height: 96px;
+    padding: 16px 24px 16px 16px;
+    border-radius: 16px 16px 0 0;
+    background: rgba(255, 255, 255, 0.5);
+
+    div{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    p{
+      font: $default-font;
+      color: $main-grey;
+    }
+  }
+
+  &-description{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
+    font: $default-font-text;
+    color: $main-grey;
+
+    &-stars{
+      display: flex;
+      gap: 4px;
+    }
+  }
+}
