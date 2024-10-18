@@ -35,3 +35,8 @@
     box-shadow: 0 8px 24px 0 rgba(60, 73, 221, 0.1);
   }
 }
+@include mobile {
+  .default-button {
+    font: $default-font-medium-mobile;
+  }
+}

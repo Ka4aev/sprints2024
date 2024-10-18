@@ -1,0 +1,36 @@
+@include tablet {
+  .header{
+    &-burger{
+      display: inherit;
+      padding: 8px;
+    }
+    &-logo{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    &-nav{
+      display: none;
+    }
+    &-help{
+      p{
+        display: none;
+      }
+    }
+  }
+}
+@include mobile {
+  .header{
+    &-inner{
+      padding: 12px 0;
+    }
+    &-help{
+      a{
+        display: none;
+      }
+      img{
+        display: inherit;
+      }
+    }
+  }
+}

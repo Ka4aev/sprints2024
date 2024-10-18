@@ -4,9 +4,11 @@
   overflow: hidden;
   background:
           url("../../../../images/gradients/reviews-white.svg") top 0 left 0 no-repeat,
-          url("../../../../images/gradients/reviews-spots__blue.svg") bottom -550px left -25% no-repeat,
-          url("../../../../images/gradients/reviews-spots.svg") top -210% right -30% no-repeat;
-
+          url("../../../../images/gradients/reviews-spots__blue.svg") bottom -550px left -100px no-repeat,
+          url("../../../../images/gradients/reviews-spots.svg") top -300px right -350px no-repeat;
+  &-title {
+    margin: 0 0 40px 56px;
+  }
   &-background{
     min-height: 100%;
     width: 100%;
@@ -21,8 +23,10 @@
     padding: 4.4rem 0;
   }
   &-grid{
-    display: grid;
-    gap: 16px;
+    display: flex;
+    margin: 0 25px;
+    flex-direction: column;
+    row-gap: 16px;
   }
 }
 .question{
@@ -34,7 +38,7 @@
 
   &-topic{
     @include flex(space-between,center);
-    padding:28px 24px 28px 32px;
+    padding:23px 24px 23px 32px;
     border-radius: 16px 16px 0 0;
     background: rgba(255, 255, 255, 0.5);
 
@@ -46,7 +50,7 @@
     padding: 16px 24px;
     font: $default-font-text;
     color: $main-grey;
-    height: 112px;
+    min-height: 112px;
   }
 }
 .second,.third,.forth{

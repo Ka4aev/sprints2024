@@ -4,6 +4,7 @@
   &-inner{
     display: flex;
     gap: 24px;
+    padding-bottom: 40px;
   }
   &-content{
     margin-top: 120px;
@@ -17,10 +18,9 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 16px;
-    width: 25.8rem;
-    height: 3.5rem;
+    max-width: 465px;
     background: $background;
-    padding: 1.1rem 0.4rem 1.1rem 0.8rem;
+    padding: 8px 8px 8px 16px;
     margin-bottom: 16px;
 
     input{
@@ -30,7 +30,7 @@
     }
 
     button{
-      @extend .white-button;
+      @extend .blue-button;
       @include padding-button(12px,24px);
       &:hover{
         padding: 10px 24px 14px 24px;
@@ -41,8 +41,8 @@
     }
   }
   &-warning{
-    margin:0 0 126px 8px;
-    width: 19.67rem;
+    margin-left: 8px;
+    max-width: 354px;
     font: $description-font-text;
     color: $dark-grey;
 

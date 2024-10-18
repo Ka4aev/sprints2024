@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Инстаботы</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
 <div class="wrapper">
@@ -14,7 +15,10 @@
         <header class="header">
             <div class="container">
                 <div class="header-inner">
-                    <h1><a href="#">Инстаботы</a></h1>
+                    <div class="header-logo">
+                        <img class="header-burger" src="images/header/burger-menu.svg" alt="menu">
+                        <h1><a href="#">Инстаботы</a></h1>
+                    </div>
                     <div class="header-menu">
                         <nav class="header-nav">
                             <a class="a" href="#">О компании</a>
@@ -26,6 +30,7 @@
                         <div class="header-help">
                             <p><span class="header-language">Ru</span>/En</p>
                             <a href="#">Вход и регистрация</a>
+                            <img src="images/header/profile.svg" alt="profile">
                         </div>
                     </div>
                 </div>
@@ -63,7 +68,7 @@
             </section>
             <section class="advantages">
                 <div class="advantages-inner">
-                    <h3>Наши преимущества</h3>
+                    <div class="container"><h3>Наши преимущества</h3></div>
                     <section class="advantages-grid">
                         <article class="advantage">
                             <div class="advantage-title">
@@ -118,9 +123,9 @@
                                     <div class="working-slider">
                                         <span>Lorem ipsum</span>
                                         <div class="working-dash"></div>
-                                        Lorem ipsum
+                                        <p>Lorem ipsum</p>
                                         <div class="working-dash"></div>
-                                        Lorem ipsum
+                                        <p>Lorem ipsum</p>
                                     </div>
                                     <h3>Lorem ipsum dolor sit amet, consectetur.</h3>
                                     <p class="working-topic">Semper sollicitudin ut cursus nunc eu ultricies.</p>
@@ -143,10 +148,7 @@
             </section>
             <section class="tariffs">
                 <div class="tariffs-inner">
-                    <div class="container">
-                        <h3>Наши тарифы</h3>
-                    </div>
-
+                    <h3>Наши тарифы</h3>
                     <section class="tariffs-grid">
                         <article class="tariff">
                             <div class="tariff-topic">
@@ -288,7 +290,7 @@
                                             aliquet porttitor. Congue arcu turpis est, aliquet porttitor.
                                         </p>
                                         <div class="review-stars">
-                                            <img src="images/main/reviews/star-active.svg" alt="start-active">
+                                            <img class="stars" src="images/main/reviews/star-active.svg" alt="start-active">
                                             <img src="images/main/reviews/star-active.svg" alt="start-active">
                                             <img src="images/main/reviews/star-active.svg" alt="start-active">
                                             <img src="images/main/reviews/star-active.svg" alt="start-active">
@@ -396,42 +398,40 @@
             </section>
             <section class="questions">
                 <div class="questions-background">
-                    <div class="container">
-                        <div class="questions-inner">
-                            <h3>Часто задаваемые вопросы</h3>
-                            <div class="questions-grid">
-                                <article class="question first">
-                                    <div class="question-topic">
-                                        <h3>Первый вопрос</h3>
-                                        <img src="images/main/questions/cross.svg" alt="cross">
-                                    </div>
-                                    <div class="question-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Massa mi aliquet eu interdum eu pellentesque amet, fermentum hendrerit. Nunc hendrerit nec risus adipiscing lacus,
-                                        lobortis lectus cursus nunc. Id pellentesque dapibus eu tincidunt dui id tortor, porttitor.
-                                        Tincidunt nunc praesent euismod in nisl, tellus suspendisse morbi nam.
-                                        Egestas eget erat malesuada gravida. Et enim integer quam orci, cursus tincidunt mauris, sit.
-                                    </div>
-                                </article>
-                                <article class="question second">
-                                    <div class="question-topic">
-                                        <h3>Второй вопрос</h3>
-                                        <img src="images/main/questions/plus.svg" alt="plus">
-                                    </div>
-                                </article>
-                                <article class="question third">
-                                    <div class="question-topic">
-                                        <h3>Третий вопрос</h3>
-                                        <img src="images/main/questions/plus.svg" alt="plus">
-                                    </div>
-                                </article>
-                                <article class="question forth">
-                                    <div class="question-topic">
-                                        <h3>Четвертый вопрос</h3>
-                                        <img src="images/main/questions/plus.svg" alt="plus">
-                                    </div>
-                                </article>
-                            </div>
+                    <div class="questions-inner">
+                        <h3 class="questions-title">Часто задаваемые вопросы</h3>
+                        <div class="questions-grid">
+                            <article class="question first">
+                                <div class="question-topic">
+                                    <h3>Первый вопрос</h3>
+                                    <img src="images/main/questions/cross.svg" alt="cross">
+                                </div>
+                                <div class="question-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Massa mi aliquet eu interdum eu pellentesque amet, fermentum hendrerit. Nunc hendrerit nec risus adipiscing lacus,
+                                    lobortis lectus cursus nunc. Id pellentesque dapibus eu tincidunt dui id tortor, porttitor.
+                                    Tincidunt nunc praesent euismod in nisl, tellus suspendisse morbi nam.
+                                    Egestas eget erat malesuada gravida. Et enim integer quam orci, cursus tincidunt mauris, sit.
+                                </div>
+                            </article>
+                            <article class="question second">
+                                <div class="question-topic">
+                                    <h3>Второй вопрос</h3>
+                                    <img src="images/main/questions/plus.svg" alt="plus">
+                                </div>
+                            </article>
+                            <article class="question third">
+                                <div class="question-topic">
+                                    <h3>Третий вопрос</h3>
+                                    <img src="images/main/questions/plus.svg" alt="plus">
+                                </div>
+                            </article>
+                            <article class="question forth">
+                                <div class="question-topic">
+                                    <h3>Четвертый вопрос</h3>
+                                    <img src="images/main/questions/plus.svg" alt="plus">
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -487,7 +487,8 @@
                         <p>&copy; 2021 Copyright reserved Instabots</p>
                     </div>
                     <a href="#start" class="footer-up">
-                        Вернуться наверх
+                        <p class="footer-text">Вернуться наверх</p>
+                        <p class="footer-text__mobile">Наверх</p>
                         <img src="images/footer/arrow.svg" alt="arrow">
                     </a>
                 </div>
@@ -495,5 +496,6 @@
         </footer>
     </div>
 </div>
+
 </body>
 </html>

@@ -2,8 +2,10 @@
   width: 100%;
   background: $main-white;
   border-radius: 24px 24px 0 0;
-  //position: sticky;
-  //top: 5px;
+
+  &-burger{
+    display: none;
+  }
 
   &-inner{
     @include flex(space-between,center);
@@ -11,13 +13,13 @@
   }
   &-menu{
     display: flex;
-    gap: 5.333rem;
+    gap: 5vw;
   }
   &-nav{
     display: flex;
     font: $default-font-text;
     align-items: center;
-    gap: 1.333rem;
+    gap: 1.8vw;
     color: $main-grey;
     transition: all 0.9s ease-in-out;
 
@@ -27,9 +29,12 @@
   }
   &-help{
     display: flex;
-    gap: 0.889rem;
+    gap: 16px;
     @include flex(center,center);
 
+    img{
+      display: none;
+    }
     p{
       text-align: center;
       color: $main-grey;
