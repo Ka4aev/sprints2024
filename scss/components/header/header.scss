@@ -39,10 +39,6 @@
       text-align: center;
       color: $main-grey;
       font: $default-font-text;
-      span{
-        font: $default-font-medium;
-        color: $color-blue;
-      }
     }
     a{
       @extend .blue-button;
@@ -54,5 +50,62 @@
         @include padding-button(12px,24px);
       }
     }
+  }
+  &-language__ru{
+    font: $default-font-medium;
+    color: $color-blue;
+  }
+}
+
+.burger-menu{
+  overflow: hidden;
+  border-radius:0 0 24px 24px;
+  position: absolute;
+  left: -120%;
+  right: 0;
+  z-index: 55;
+  padding: 80px 0;
+  max-width: 720px;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease;
+  background: radial-gradient(circle at left, rgba(230, 230, 255) 0%, rgba(255, 255, 255) 60%, rgba(255, 255, 255) 100%);
+  &.active{
+    display: block;
+    left: 0;
+    top: 80px;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+
+    h4{
+      color: $main-grey;
+      margin-bottom: 40px;
+    }
+  }
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font: $font-h2;
+    margin-bottom: 156px;
+
+    & a{
+      transition: color 0.3s ease;
+    }
+    & a:hover{
+      color: $dark-grey;
+    }
+
+    & a:nth-child(1){
+      color: $color-blue;
+    }
+  }
+  p{
+    font: $font-h2;
+    color: $main-grey;
+  }
+  &__language__ru{
+    color: $color-blue;
   }
 }

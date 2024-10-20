@@ -8,6 +8,7 @@
     <title>Инстаботы</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <script src="script.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -21,14 +22,18 @@
                     </div>
                     <div class="header-menu">
                         <nav class="header-nav">
-                            <a class="a" href="#">О компании</a>
-                            <a href="#">Тарифы</a>
-                            <a href="#">Отзывы</a>
-                            <a href="#">Q&A</a>
-                            <a href="#">Обратная связь</a>
+                            <a href="#advantages">О компании</a>
+                            <a href="#tariffs">Тарифы</a>
+                            <a href="#reviews">Отзывы</a>
+                            <a href="#questions">Q&A</a>
+                            <a href="#feedback">Обратная связь</a>
                         </nav>
                         <div class="header-help">
-                            <p><span class="header-language">Ru</span>/En</p>
+                            <p>
+                                <span class="header-language__ru">Ru</span>
+                                /
+                                <span class="header-language__en">En</span>
+                            </p>
                             <a href="#">Вход и регистрация</a>
                             <img src="images/header/profile.svg" alt="profile">
                         </div>
@@ -36,6 +41,25 @@
                 </div>
             </div>
         </header>
+        <div class="burger-menu">
+            <div class="container">
+                <div class="burger-menu__inner">
+                    <h4>Меню</h4>
+                    <nav class="burger-menu__nav">
+                        <a href="#advantages">О компании</a>
+                        <a href="#tariffs">Тарифы</a>
+                        <a href="#reviews">Отзывы</a>
+                        <a href="#questions">Q&A</a>
+                        <a href="#feedback">Обратная связь</a>
+                    </nav>
+                    <p>
+                        <span class="burger-menu__language__ru">Ru</span>
+                        /
+                        <span class="burger-menu__language__en">En</span>
+                    </p>
+                </div>
+            </div>
+        </div>
         <main>
             <section class="greeting">
                 <div class="greeting-background">
@@ -66,10 +90,10 @@
                 </div>
 
             </section>
-            <section class="advantages">
+            <section class="advantages" id="advantages">
                 <div class="advantages-inner">
-                    <div class="container"><h3>Наши преимущества</h3></div>
-                    <section class="advantages-grid">
+                     <div class="container"><h3>Наши преимущества</h3></div>
+                   <section class="advantages-grid">
                         <article class="advantage">
                             <div class="advantage-title">
                                 <img src="images/main/advantages/glasses-smile.png" alt="glasses-smile">
@@ -146,7 +170,7 @@
                     </div>
                 </div>
             </section>
-            <section class="tariffs">
+            <section class="tariffs" id="tariffs">
                 <div class="tariffs-inner">
                     <h3>Наши тарифы</h3>
                     <section class="tariffs-grid">
@@ -269,7 +293,7 @@
                     </section>
                 </div>
             </section>
-            <section class="reviews">
+            <section class="reviews" id="reviews">
                 <div class="reviews-background">
                     <div class="container">
                         <div class="reviews-inner">
@@ -396,7 +420,7 @@
                     </div>
                 </div>
             </section>
-            <section class="questions">
+            <section class="questions" id="questions">
                 <div class="questions-background">
                     <div class="questions-inner">
                         <h3 class="questions-title">Часто задаваемые вопросы</h3>
@@ -436,7 +460,7 @@
                     </div>
                 </div>
             </section>
-            <section class="feedback">
+            <section class="feedback" id="feedback">
                 <div class="container">
                     <div class="feedback-inner">
                         <div class="feedback-content">
