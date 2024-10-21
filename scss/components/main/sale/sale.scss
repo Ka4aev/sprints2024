@@ -1,0 +1,53 @@
+.sale{
+  background: $main-white;
+
+  &-inner{
+    display: flex;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+  &-content{
+    margin-top: 120px;
+  }
+  h2{
+    margin-bottom: 40px;
+  }
+
+  form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    max-width: 465px;
+    background: $background;
+    padding: 8px 8px 8px 16px;
+    margin-bottom: 16px;
+
+    input{
+      background: transparent;
+      font: $default-font-text;
+      align-items: center;
+    }
+
+    button{
+      @extend .blue-button;
+      @include padding-button(12px,24px);
+      &:hover{
+        padding: 10px 24px 14px 24px;
+      }
+      &:active{
+        @include padding-button(12px,24px);
+      }
+    }
+  }
+  &-warning{
+    margin-left: 8px;
+    max-width: 354px;
+    font: $description-font-text;
+    color: $dark-grey;
+
+    a{
+      color: $hover-blue;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.footer{
+  padding: 25px 0;
+  background: $color-blue;
+  border-radius: 0 0 24px 24px;
+  &-inner{
+    @include flex(space-between,center);
+    font: $default-font-text;
+    color: $main-white;
+
+  }
+  &-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    max-width: 192px;
+
+    p{
+      font: $table-text;
+      color: $main-lt;
+    }
+  }
+  &-up{
+    display: flex;
+    height: 24px;
+    gap: 8px;
+
+    img{
+      display: flex;
+      height: 16px;
+      align-self: start;
+    }
+  }
+  &-text__mobile{
+    display: none;
+  }
+}

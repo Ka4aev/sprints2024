@@ -1,0 +1,111 @@
+.header{
+  width: 100%;
+  background: $main-white;
+  border-radius: 24px 24px 0 0;
+
+  &-burger{
+    display: none;
+  }
+
+  &-inner{
+    @include flex(space-between,center);
+    padding: 16px 0;
+  }
+  &-menu{
+    display: flex;
+    gap: 5vw;
+  }
+  &-nav{
+    display: flex;
+    font: $default-font-text;
+    align-items: center;
+    gap: 1.8vw;
+    color: $main-grey;
+    transition: all 0.9s ease-in-out;
+
+    a:hover{
+      color: $dark-grey;
+    }
+  }
+  &-help{
+    display: flex;
+    gap: 16px;
+    @include flex(center,center);
+
+    img{
+      display: none;
+    }
+    p{
+      text-align: center;
+      color: $main-grey;
+      font: $default-font-text;
+    }
+    a{
+      @extend .blue-button;
+      @include padding-button(12px,24px);
+      &:hover{
+        padding: 10px 24px 14px 24px;
+      }
+      &:active{
+        @include padding-button(12px,24px);
+      }
+    }
+  }
+  &-language__ru{
+    font: $default-font-medium;
+    color: $color-blue;
+  }
+}
+
+.burger-menu{
+  overflow: hidden;
+  border-radius:0 0 24px 24px;
+  position: absolute;
+  left: -120%;
+  right: 0;
+  z-index: 55;
+  padding: 80px 0;
+  max-width: 720px;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease;
+  background: radial-gradient(circle at left, rgba(230, 230, 255) 0%, rgba(255, 255, 255) 60%, rgba(255, 255, 255) 100%);
+  &.active{
+    display: block;
+    left: 0;
+    top: 80px;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+
+    h4{
+      color: $main-grey;
+      margin-bottom: 40px;
+    }
+  }
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font: $font-h2;
+    margin-bottom: 156px;
+
+    & a{
+      transition: color 0.3s ease;
+    }
+    & a:hover{
+      color: $dark-grey;
+    }
+
+    & a:nth-child(1){
+      color: $color-blue;
+    }
+  }
+  p{
+    font: $font-h2;
+    color: $main-grey;
+  }
+  &__language__ru{
+    color: $color-blue;
+  }
+}
