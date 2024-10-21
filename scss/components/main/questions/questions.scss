@@ -38,25 +38,29 @@
   &-topic{
     @include flex(space-between,center);
     padding:23px 24px 23px 32px;
-    border-radius: 16px 16px 0 0;
+    border-radius: 16px;
     background: rgba(255, 255, 255, 0.5);
-
     img{
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
     }
   }
   &-description{
-    padding: 16px 24px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 24px;
     font: $default-font-text;
     color: $main-grey;
-    min-height: 112px;
+    transition: all .4s ease;
   }
-}
-.second,.third,.forth{
-  height: fit-content;
-}
-.second .question-topic,
-.third .question-topic,
-.forth .question-topic{
-  border-radius: 16px;
+  &.active &-description{
+    padding: 16px 24px;
+    max-height: 300px;
+  }
+  &.active &-topic {
+    border-radius: 16px 16px 0 0;
+    img{
+      transform: rotate(-45deg);
+    }
+  }
 }

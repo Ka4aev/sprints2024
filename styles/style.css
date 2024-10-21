@@ -1,11 +1,13 @@
 @font-face {
   font-family: "Visuelt Pro";
   src: url("../../fonts/VisueltPro-Regular.ttf");
+  src: local("Visuelt Pro"), local("Visuelt-Regular"), url("../../fonts/VisueltPro-Regular.woff2") format("woff2"), url("../../fonts/VisueltPro-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Visuelt Pro";
   src: url("../../fonts/VisueltPro-Medium.ttf");
+  src: local("Visuelt Pro Medium"), local("Visuelt-Medium"), url("../../fonts/VisueltPro-Medium.ttf") format("truetype"), url("../../fonts/VisueltPro-Medium.woff2") format("woff2");
   font-weight: 500;
 }
 * {
@@ -777,7 +779,7 @@ h4 {
   position: inherit;
   max-width: none;
 }
-.reviews-block.active .reviews-semen, .reviews-block.active .reviews-oleja, .reviews-block.active .reviews-serega, .reviews-block.active .reviews-inokenty {
+.reviews-block.active .reviews-semen, .reviews-block.active .reviews-nikitka, .reviews-block.active .reviews-mihail, .reviews-block.active .reviews-timofei {
   left: 0;
   top: 0;
 }
@@ -800,15 +802,15 @@ h4 {
   top: 0;
   left: 326px;
 }
-.reviews-oleja {
+.reviews-nikitka {
   top: 56px;
   left: 0;
 }
-.reviews-serega {
+.reviews-mihail {
   bottom: 0;
   left: 164px;
 }
-.reviews-inokenty {
+.reviews-timofei {
   top: 195px;
   right: 0;
 }
@@ -822,6 +824,7 @@ h4 {
   background: #EAE7F4;
   position: absolute;
   min-height: 240px;
+  transition: all 0.8s ease;
 }
 .review-topic {
   display: flex;
@@ -837,6 +840,9 @@ h4 {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.review-topic div img {
+  border-radius: 32px;
 }
 .review-topic p {
   font: 400 1rem/135% "Visuelt Pro";
@@ -861,7 +867,7 @@ h4 {
     grid-template: repeat(4, 1fr)/1fr;
     gap: 24px;
   }
-  .reviews-semen, .reviews-oleja, .reviews-serega, .reviews-inokenty {
+  .reviews-semen, .reviews-nikitka, .reviews-mihail, .reviews-timofei {
     left: 0;
     top: 0;
   }
@@ -1019,27 +1025,30 @@ h4 {
   justify-content: space-between;
   align-items: center;
   padding: 23px 24px 23px 32px;
-  border-radius: 16px 16px 0 0;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.5);
 }
 .question-topic img {
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .question-description {
-  padding: 16px 24px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
   font: 400 1rem/135% "Visuelt Pro";
   color: #808080;
-  min-height: 112px;
+  transition: all 0.4s ease;
 }
-
-.second, .third, .forth {
-  height: fit-content;
+.question.active .question-description {
+  padding: 16px 24px;
+  max-height: 300px;
 }
-
-.second .question-topic,
-.third .question-topic,
-.forth .question-topic {
-  border-radius: 16px;
+.question.active .question-topic {
+  border-radius: 16px 16px 0 0;
+}
+.question.active .question-topic img {
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 1200px) {

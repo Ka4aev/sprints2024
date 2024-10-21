@@ -15,15 +15,27 @@ document.addEventListener('DOMContentLoaded',() => {
             burgerMenu.classList.remove('active');
         }
     });
-    // скрытие меню если ширина сайта больше планшетной
-    window.addEventListener('resize', () => {
-        document.documentElement.getBoundingClientRect().width > 1200 ? burgerMenu.classList.remove('active') : null;
-    })
 
     // группировка отзывов
     reviewsButton.addEventListener('click', () => {
         reviewsBlock.classList.toggle('active');
         document.querySelector('.reviews-group').style.display = 'inline';
         console.log('класс "active" дан:', reviewsBlock.classList.contains('active'));
+    });
+
+    window.addEventListener('resize', () => {
+        document.documentElement.getBoundingClientRect().width > 1200 ? burgerMenu.classList.remove('active') : null;
+        if (document.documentElement.getBoundingClientRect().width < 1200){
+            reviewsBlock.classList.remove('active')
+            document.querySelector('.reviews-group').style.display='none'
+        }
+    })
+
+    // выдвижение описания вопросов
+    document.querySelectorAll('.question-topic').forEach(topic => {
+        topic.addEventListener('click', () => {
+            const question = topic.parentElement;
+            question.classList.toggle('active');
+        });
     });
 });

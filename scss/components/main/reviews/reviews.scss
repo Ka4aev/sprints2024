@@ -39,7 +39,7 @@
         position: inherit;
         max-width: none;
       }
-      .reviews-semen,.reviews-oleja,.reviews-serega,.reviews-inokenty{
+      .reviews-semen,.reviews-nikitka,.reviews-mihail,.reviews-timofei{
         left: 0;
         top: 0;
       }
@@ -68,15 +68,15 @@
     top: 0;
     left: 326px;
   }
-  &-oleja{
+  &-nikitka{
     top: 56px;
     left: 0;
   }
-  &-serega{
+  &-mihail{
     bottom: 0;
     left: 164px;
   }
-  &-inokenty{
+  &-timofei{
     top: 195px;
     right: 0;
   }
@@ -90,6 +90,7 @@
   background: #EAE7F4;
   position: absolute;
   min-height: 240px;
+  transition: all .8s ease;
 
   &-topic{
     display: flex;
@@ -103,11 +104,15 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      img{
+        border-radius: 32px;
+      }
     }
     p{
       font: $default-font-text;
       color: $main-grey;
     }
+
   }
 
   &-description{
