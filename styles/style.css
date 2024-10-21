@@ -410,7 +410,7 @@ h4 {
 }
 @media screen and (max-width: 670px) {
   .greeting {
-    background: url("../../../../images/gradients/content-white.svg") top -59px left 20px no-repeat, url("../../../../images/gradients/content-spots.svg") top 200px left -550px no-repeat, url("../../../../images/gradients/content-circles.svg") top 160px right 32px no-repeat;
+    background: url("../../../../images/gradients/content-white.svg") top -59px left 20px no-repeat, url("../../../../images/gradients/content-spots.svg") top 200px left -550px no-repeat, url("../../../../images/gradients/content-circles.svg") top 200px right 32px no-repeat;
   }
   .greeting-inner {
     padding: 40px 0;
@@ -745,6 +745,13 @@ h4 {
   overflow: hidden;
   background: url("../../../../images/gradients/reviews-white.svg") bottom -100px left -380px no-repeat, url("../../../../images/gradients/reviews-spots__blue.svg") bottom -300px right -420px no-repeat, url("../../../../images/gradients/reviews-spots.svg") top -450px right -100px no-repeat;
 }
+.reviews-group {
+  display: none;
+  margin-top: 32px;
+  font: 400 1.333rem/100% "Visuelt Pro";
+  text-align: center;
+  color: #808080;
+}
 .reviews-background {
   min-height: 100%;
   width: 100%;
@@ -760,6 +767,22 @@ h4 {
   width: 100%;
   min-height: 31.1rem;
   position: relative;
+}
+.reviews-block.active {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  gap: 24px;
+}
+.reviews-block.active .review {
+  position: inherit;
+  max-width: none;
+}
+.reviews-block.active .reviews-semen, .reviews-block.active .reviews-oleja, .reviews-block.active .reviews-serega, .reviews-block.active .reviews-inokenty {
+  left: 0;
+  top: 0;
+}
+.reviews-block.active .reviews-button {
+  display: none;
 }
 .reviews-block button {
   padding: 16px 24px;

@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded',() => {
     const burgerButton = document.querySelector('.header-burger');
     const burgerMenu = document.querySelector('.burger-menu');
+    const reviewsButton = document.querySelector('.reviews-button');
+    const reviewsBlock = document.querySelector('.reviews-block');
 
     // открыть меню
     burgerButton.addEventListener('click', () => {
@@ -17,4 +19,11 @@ document.addEventListener('DOMContentLoaded',() => {
     window.addEventListener('resize', () => {
         document.documentElement.getBoundingClientRect().width > 1200 ? burgerMenu.classList.remove('active') : null;
     })
+
+    // группировка отзывов
+    reviewsButton.addEventListener('click', () => {
+        reviewsBlock.classList.toggle('active');
+        document.querySelector('.reviews-group').style.display = 'inline';
+        console.log('класс "active" дан:', reviewsBlock.classList.contains('active'));
+    });
 });
